@@ -42,19 +42,31 @@
 				</AppRailAnchor>
 			</svelte:fragment>
 			<!-- --- -->
-			<AppRailAnchor href="/" title="About Me" selected={$page.url.pathname === '/'}>
+			<AppRailAnchor
+				href="/"
+				title="About Me"
+				selected={$page.url.pathname.replace('/', '') === ''}
+			>
 				<svelte:fragment slot="lead">
 					<Person classList="w-6 h-6 mx-auto" />
 				</svelte:fragment>
 				About Me
 			</AppRailAnchor>
-			<AppRailAnchor href="/tech" title="tech-stack" selected={$page.url.pathname === '/tech/'}>
+			<AppRailAnchor
+				href="/tech"
+				title="tech-stack"
+				selected={$page.url.pathname.replace('/', '') === 'tech'}
+			>
 				<svelte:fragment slot="lead">
 					<Chip classList="w-6 h-6 mx-auto" />
 				</svelte:fragment>
 				<span>Tech Stack</span>
 			</AppRailAnchor>
-			<AppRailAnchor href="/work" title="work" selected={$page.url.pathname === '/work/'}>
+			<AppRailAnchor
+				href="/work"
+				title="work"
+				selected={$page.url.pathname.replace('/', '') === 'work'}
+			>
 				<svelte:fragment slot="lead">
 					<Work classList="w-6 h-6 mx-auto" />
 				</svelte:fragment>
@@ -65,7 +77,7 @@
 				<AppRailAnchor
 					href="/contact"
 					title="Contact"
-					selected={$page.url.pathname === '/contact/'}
+					selected={$page.url.pathname.replace('/', '') === 'contact'}
 				>
 					<div class="anchor">Contact Me</div>
 				</AppRailAnchor>
