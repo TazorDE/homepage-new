@@ -1,10 +1,6 @@
 <script>
 	import IBM from './IBM.svelte';
-
 	import MaingauEnergie from './MaingauEnergie.svelte';
-
-	import DescriptionListItem from './DescriptionListItem.svelte';
-	import CarrerBulletPoint from './CarrerBulletPoint.svelte';
 	import AcademicCarreer from './AcademicCarreer.svelte';
 	import Work from '$lib/icons/Work.svelte';
 </script>

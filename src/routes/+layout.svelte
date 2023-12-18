@@ -1,9 +1,11 @@
 <script lang="ts">
+	import Waves from './Waves.svelte';
+
 	import Work from './../lib/icons/Work.svelte';
 	import Person from './../lib/icons/Person.svelte';
 	import Chip from './../lib/icons/Chip.svelte';
 	import { page } from '$app/stores';
-	
+
 	import '../app.postcss';
 	import { AppShell, AppRail, AppRailAnchor, AppRailTile } from '@skeletonlabs/skeleton';
 
@@ -15,7 +17,6 @@
 	import css from 'highlight.js/lib/languages/css';
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import typescript from 'highlight.js/lib/languages/typescript';
-
 
 	hljs.registerLanguage('xml', xml); // for HTML
 	hljs.registerLanguage('css', css);

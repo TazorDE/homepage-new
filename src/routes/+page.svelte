@@ -9,13 +9,15 @@
 		</p>
 		<div class="h-8"></div>
 		<p class="text-xl text-center">
-			Currently, I am working at <a
-				class="anchor"
+			Currently, I am working at
+			<a
+				class="anchor !text-secondary-500 hover:!text-secondary-400"
 				target="_blank"
 				href="https://maingau-energie.de/"
 			>
 				Maingau Energie GmbH
-			</a> in Obertshausen, Germany.
+			</a>
+			in Obertshausen, Germany.
 		</p>
 		<div class="h-8"></div>
 		<p class="text-xl text-center">
