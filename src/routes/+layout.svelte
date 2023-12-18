@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Waves from './Waves.svelte';
-
 	import Work from './../lib/icons/Work.svelte';
 	import Person from './../lib/icons/Person.svelte';
 	import Chip from './../lib/icons/Chip.svelte';
@@ -28,6 +26,9 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	injectSpeedInsights();
 </script>
 
 <!-- App Shell -->
@@ -47,13 +48,13 @@
 				</svelte:fragment>
 				About Me
 			</AppRailAnchor>
-			<AppRailAnchor href="/tech" title="tech-stack" selected={$page.url.pathname === '/tech'}>
+			<AppRailAnchor href="/tech" title="tech-stack" selected={$page.url.pathname === '/tech/'}>
 				<svelte:fragment slot="lead">
 					<Chip classList="w-6 h-6 mx-auto" />
 				</svelte:fragment>
 				<span>Tech Stack</span>
 			</AppRailAnchor>
-			<AppRailAnchor href="/work" title="work" selected={$page.url.pathname === '/work'}>
+			<AppRailAnchor href="/work" title="work" selected={$page.url.pathname === '/work/'}>
 				<svelte:fragment slot="lead">
 					<Work classList="w-6 h-6 mx-auto" />
 				</svelte:fragment>
@@ -61,7 +62,11 @@
 			</AppRailAnchor>
 			<!-- --- -->
 			<svelte:fragment slot="trail">
-				<AppRailAnchor href="/contact" title="Contact">
+				<AppRailAnchor
+					href="/contact"
+					title="Contact"
+					selected={$page.url.pathname === '/contact/'}
+				>
 					<div class="anchor">Contact Me</div>
 				</AppRailAnchor>
 			</svelte:fragment>
