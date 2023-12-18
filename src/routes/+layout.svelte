@@ -77,7 +77,6 @@
 				<AppRailAnchor
 					href="/contact"
 					title="Contact"
-					selected={$page.url.pathname.replace('/', '') === 'contact'}
 				>
 					<div class="anchor">Contact Me</div>
 				</AppRailAnchor>
