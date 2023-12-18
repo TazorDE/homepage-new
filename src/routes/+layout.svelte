@@ -27,10 +27,6 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
-
-	$: home = $page.url.pathname === '/';
-	$: tech = $page.url.pathname === '/tech';
-	$: work = $page.url.pathname === '/work';
 </script>
 
 <!-- App Shell -->
@@ -44,19 +40,19 @@
 				</AppRailAnchor>
 			</svelte:fragment>
 			<!-- --- -->
-			<AppRailAnchor href="/" title="About Me" selected={home}>
+			<AppRailAnchor href="/" title="About Me" selected={$page.url.pathname === '/'}>
 				<svelte:fragment slot="lead">
 					<Person classList="w-6 h-6 mx-auto" />
 				</svelte:fragment>
 				About Me
 			</AppRailAnchor>
-			<AppRailAnchor href="/tech" title="tech-stack" selected={tech}>
+			<AppRailAnchor href="/tech" title="tech-stack" selected={$page.url.pathname === '/tech'}>
 				<svelte:fragment slot="lead">
 					<Chip classList="w-6 h-6 mx-auto" />
 				</svelte:fragment>
 				<span>Tech Stack</span>
 			</AppRailAnchor>
-			<AppRailAnchor href="/work" title="work" selected={work}>
+			<AppRailAnchor href="/work" title="work" selected={$page.url.pathname === '/work'}>
 				<svelte:fragment slot="lead">
 					<Work classList="w-6 h-6 mx-auto" />
 				</svelte:fragment>
