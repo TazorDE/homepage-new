@@ -55,7 +55,7 @@
 			<AppRailAnchor
 				href="/tech"
 				title="tech-stack"
-				selected={$page.url.pathname.replace('/', '') === 'tech'}
+				selected={$page.url.pathname.includes('tech')}
 			>
 				<svelte:fragment slot="lead">
 					<Chip classList="w-6 h-6 mx-auto" />
@@ -65,7 +65,7 @@
 			<AppRailAnchor
 				href="/work"
 				title="work"
-				selected={$page.url.pathname.replace('/', '') === 'work'}
+				selected={$page.url.pathname.includes('work')}
 			>
 				<svelte:fragment slot="lead">
 					<Work classList="w-6 h-6 mx-auto" />
